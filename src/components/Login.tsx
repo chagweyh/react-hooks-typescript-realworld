@@ -23,10 +23,10 @@ export default function Login(_: RouteComponentProps) {
       dispatch({ type: 'LOAD_USER', user });
       navigate('/');
     } catch (error) {
-      console.log(error.response);
+      console.log(error);
       setLoading(false);
-      if (error.response && error.response.status === 422) {
-        setErrors(error.response.data.errors);
+      if (error.status === 422) {
+        setErrors(error.data.errors);
       }
     }
   };
@@ -68,6 +68,7 @@ export default function Login(_: RouteComponentProps) {
               </fieldset>
               <button
                 className="btn btn-lg btn-primary pull-xs-right"
+                type="submit"
                 disabled={loading}
               >
                 Sign In

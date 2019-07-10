@@ -54,8 +54,8 @@ export default function Settings(_: RouteComponentProps) {
       dispatch({ type: 'LOAD_USER', user: payload.data.user });
     } catch (error) {
       console.log(error);
-      if (error.response && error.response.status === 422) {
-        setErrors(error.response.data.errors);
+      if (error.status === 422) {
+        setErrors(error.data.errors);
       }
     }
     setLoading(false);

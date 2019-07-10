@@ -69,9 +69,9 @@ export default function Editor({
       }
       navigate(`/article/${payload.data.article.slug}`);
     } catch (error) {
-      if (error.response && error.response.status === 422) {
-        console.log(error.response);
-        dispatch({ type: 'SET_ERRORS', errors: error.response.data.errors });
+      console.log(error);
+      if (error.status === 422) {
+        dispatch({ type: 'SET_ERRORS', errors: error.data.errors });
       }
     }
   };

@@ -37,8 +37,8 @@ export default function Register(_: RouteComponentProps) {
     } catch (error) {
       console.log(error);
       setLoading(false);
-      if (error.response && error.response.status === 422) {
-        setErrors(error.response.data.errors);
+      if (error.status === 422) {
+        setErrors(error.data.errors);
       }
     }
   };

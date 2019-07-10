@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "env": {
+    "apiUrl": "https://conduit.productionready.io/api",
+    "user": {
+      "email": "reactuser@test.com",
+      "password": "react123456"
+    }
+  },
+  "viewportHeight": 1000,
+  "viewportWidth": 1000
+}
