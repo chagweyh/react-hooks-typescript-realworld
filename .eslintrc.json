@@ -1,0 +1,7 @@
+{
+  "extends": ["react-app", "plugin:prettier/recommended"],
+  "plugins": ["cypress"],
+  "env": {
+    "cypress/globals": true
+  }
+}
