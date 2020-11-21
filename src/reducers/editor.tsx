@@ -10,7 +10,7 @@ type EditorAction =
     }
   | {
       type: 'UPDATE_FORM';
-      field: { key: keyof IForm; value: IForm[keyof IForm] };
+      field: { key: string; value: string };
     }
   | { type: 'SET_ERRORS'; errors: IErrors };
 

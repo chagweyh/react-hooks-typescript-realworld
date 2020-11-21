@@ -27,7 +27,7 @@ git clone https://github.com/haythemchagwey/react-hooks-typescript-realworld.git
 # Cd into the folder
 cd react-hooks-typescript-realworld
 # Install the dependencies
-yarn install
+npm install
 # Run the development server
-yarn start
+npm start
 ```

@@ -39,7 +39,6 @@ export default function Editor({
   const handleChange = (
     event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    // @ts-ignore
     dispatch({
       type: 'UPDATE_FORM',
       field: {

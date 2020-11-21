@@ -5,6 +5,14 @@ import useAuth from '../context/auth';
 import { updateUser, logout } from '../api/AuthAPI';
 import { IErrors } from '../types';
 
+type Form = {
+  username: string;
+  email: string;
+  image: string;
+  bio: string;
+  password?: string;
+};
+
 export default function Settings(_: RouteComponentProps) {
   const {
     state: { user },
@@ -12,7 +20,7 @@ export default function Settings(_: RouteComponentProps) {
   } = useAuth();
   const [loading, setLoading] = React.useState(false);
   const [errors, setErrors] = React.useState<IErrors | null>(null);
-  const [form, setForm] = React.useState({
+  const [form, setForm] = React.useState<Form>({
     username: '',
     email: '',
     image: '',
